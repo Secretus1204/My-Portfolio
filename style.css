@@ -1,10 +1,10 @@
 :root {
   --bg: #04060f;
   --card: rgba(255, 255, 255, 0.04);
-  --accent: #7eb8f7;        /* icy blue — matches that bright star */
-  --secondary: #a78bfa;     /* soft violet for secondary highlights */
-  --text: #e8edf5;          /* slightly cool white */
-  --muted: #6b7a99;         /* desaturated blue-grey */
+  --accent: #7eb8f7;      
+  --secondary: #a78bfa;  
+  --text: #e8edf5;         
+  --muted: #6b7a99;         
 }
 
 * {
@@ -28,12 +28,26 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1.5rem 8%;
   position: sticky;
   top: 0;
+  z-index: 100;
   backdrop-filter: blur(12px);
   background: rgba(4, 6, 15, 0.6);
   border-bottom: 1px solid rgba(126, 184, 247, 0.08);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
 }
 
 .hamburger {
@@ -44,6 +58,7 @@ nav {
   border: none;
   cursor: pointer;
   padding: 4px;
+  z-index: 110;
 }
 
 .hamburger span {
@@ -67,6 +82,7 @@ nav {
   .nav-links {
     display: none;
     flex-direction: column;
+    align-items: flex-start;
     position: absolute;
     top: 70px;
     left: 0;
@@ -86,7 +102,6 @@ nav {
 nav a {
   color: var(--text);
   text-decoration: none;
-  margin-left: 20px;
   transition: color 0.2s;
 }
 
@@ -176,7 +191,7 @@ section {
   backdrop-filter: blur(8px);
   transition: all 0.3s;
 }
-.skill-card h3{
+.skill-card h3 {
   margin-bottom: 10px;
 }
 .skill-card:hover {
